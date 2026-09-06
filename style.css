@@ -95,6 +95,31 @@ h4 {
   border: 1px solid var(--border);
 }
 
+.sub-container h4 {
+  position: relative;
+  color: #222;
+  padding: 24px 160px 40px 24px;
+  border-radius: 10px;
+  min-height: 120px;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #444;
+}
+
+.sub-container h4::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 120px;
+  height: 90px;
+  transform: translateY(-50%);
+  background: url("2.jpg") center / cover no-repeat;
+  border-radius: 8px;
+}
+
 /* ===============================
    TEXTOS
    =============================== */
@@ -298,8 +323,14 @@ img {
   .week-block h4 {
     font-size: 0.95rem;
     line-height: 1.2;
-    padding: 0.5rem 0.65rem;
+    padding: 0.5rem 90px 0.5rem 0.65rem;
     margin-bottom: 0.35rem;
+  }
+
+  .sub-container h4::after {
+    right: 0.65rem;
+    width: 76px;
+    height: 58px;
   }
 
   .week-details {
